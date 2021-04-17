@@ -1,0 +1,135 @@
+:root {
+	--text-color: white;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ace5fc;
+	height: 100%;
+	display: grid;
+	justify-items: center;
+	font-family: Consolas, "Nunito", sans-serif;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	gap: 40px;
+}
+
+h1 {
+	color: var(--text-color, white);
+}
+
+p {
+	font-size: 1.2rem;
+	color: var(--text-color, white);
+}
+
+.container {
+	width: 250px;
+	background: white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 10px;
+	position: relative;
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.inner {
+		background: #00b6ff;
+		padding: 1.5em;
+		width: 100%;
+		height: 100%;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 50px;
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 10px;
+		clip-path: circle(10% at 0% 0%);
+		transition: clip-path 0.5s ease-in-out;
+		margin-bottom: 0;
+	}
+
+	&:hover .inner {
+		clip-path: circle(75%);
+	}
+}
+
+.anotherContainer {
+	width: 250px;
+	background: white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 60px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 10px;
+	position: relative;
+
+	> span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 60%;
+	}
+
+	.anotherInner {
+		background: rgb(7, 218, 165);
+		padding: 1.5em;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 60px;
+		border-bottom-left-radius: 60px;
+		border-bottom-right-radius: 10px;
+		clip-path: circle(10% at 80% 15%);
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			clip-path: circle(75%);
+			background: #00b6ff;
+			cursor: default;
+		}
+
+		span {
+			color: var(--text-color, white);
+			transition: color 0.5s;
+			font-weight: bold;
+			float: right;
+			margin-right: 10%;
+			cursor: pointer;
+		}
+
+		&:hover span {
+			display: none;
+		}
+	}
+}
+
+.yetAnotherContainer {
+	width: 250px;
+	background: white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 60px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 10px;
+
+	.yetAnotherInner {
+		background: rgb(7, 218, 165);
+		padding: 1.5em;
+		border-radius: inherit;
+		clip-path: inset(0% 0% 0% 100%);
+		transition: all 0.5s ease-in-out;
+	}
+
+	&:hover .yetAnotherInner {
+		clip-path: inset(0% 0% 0% 0%);
+	}
+}
