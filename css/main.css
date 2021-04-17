@@ -1,0 +1,155 @@
+:root {
+  --text-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ace5fc;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  font-family: Consolas, "Nunito", sans-serif;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 50px;
+  gap: 40px;
+}
+
+h1 {
+  color: var(--text-color, white);
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--text-color, white);
+}
+
+.container {
+  width: 250px;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+
+.container span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.container .inner {
+  background: #00b6ff;
+  padding: 1.5em;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+  -webkit-clip-path: circle(10% at 0% 0%);
+          clip-path: circle(10% at 0% 0%);
+  -webkit-transition: -webkit-clip-path 0.5s ease-in-out;
+  transition: -webkit-clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+  margin-bottom: 0;
+}
+
+.container:hover .inner {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+}
+
+.anotherContainer {
+  width: 250px;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+
+.anotherContainer > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.anotherContainer .anotherInner {
+  background: #07daa5;
+  padding: 1.5em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 10px;
+  -webkit-clip-path: circle(10% at 80% 15%);
+          clip-path: circle(10% at 80% 15%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.anotherContainer .anotherInner:hover {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  background: #00b6ff;
+  cursor: default;
+}
+
+.anotherContainer .anotherInner span {
+  color: var(--text-color, white);
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  font-weight: bold;
+  float: right;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+.anotherContainer .anotherInner:hover span {
+  display: none;
+}
+
+.yetAnotherContainer {
+  width: 250px;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 10px;
+}
+
+.yetAnotherContainer .yetAnotherInner {
+  background: #07daa5;
+  padding: 1.5em;
+  border-radius: inherit;
+  -webkit-clip-path: inset(0% 0% 0% 100%);
+          clip-path: inset(0% 0% 0% 100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.yetAnotherContainer:hover .yetAnotherInner {
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
+}
+/*# sourceMappingURL=main.css.map */
